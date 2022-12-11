@@ -6,13 +6,10 @@ import by.tc.task.service.exception.ServiceException;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-
+import java.net.*;
 public class ServerMain {
     public static void main(String[] args) {
-        BufferedReader  in;
-        BufferedWriter out;
         ServerSocket server;
-        UserClient userClient = new UserClient();
         boolean stop = false;
         try {
             server = new ServerSocket(8000);
@@ -22,13 +19,44 @@ public class ServerMain {
             return;
         }
         try {
+            System.out.println("Started..");
             while (!stop) {
                 try {
-                System.out.println("Started..");
                 Socket clientSocket = server.accept();
+                    System.out.println("new client");
+                ClientHandler clientHandler = new ClientHandler(clientSocket);
+                new Thread(clientHandler).start();
+                }
+                catch (Exception e) {
+                    stop = true;
+                }
+            }
+            }
+            finally
+             {
+                System.out.println("Closing server..");
+                try {
+                server.close(); }
+                catch (IOException e) {
+                    System.out.println("could not close server normally");
+            }
+        }
+    }
 
+    private static class ClientHandler implements Runnable {
+        private final Socket clientSocket;
+        public ClientHandler(Socket socket)
+        {
+            this.clientSocket = socket;
+        }
+        public void run() {
+            UserClient userClient = new UserClient();
+            BufferedReader in = null;
+            BufferedWriter out = null;
+            try {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+
                 boolean exit = false;
                 while (!exit) {
                     try {
@@ -47,26 +75,45 @@ public class ServerMain {
                     } catch (Exception e) {
                         exit = true;
                         System.out.println(e.getMessage());
-                        out.write("some problem occurred\n");
-                        out.flush();
+                        try {
+                            out.write("some problem occurred\n");
+                            out.flush();
+                        } catch (IOException ex) {
+                            throw new RuntimeException(ex);
+                        }
                     }
                 }
+
+            try {
                 clientSocket.close();
                 in.close();
                 out.close();
-                }
-                catch (Exception e) {
-                    stop = true;
-                }
-            }
-            }
-            finally
-             {
-                System.out.println("Closing server..");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } finally {
                 try {
-                server.close(); }
+                    out.close();
+                    in.close();
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } finally {
+                try {
+                    if (out != null) {
+                        out.close();
+                    }
+                    if (in != null) {
+                        in.close();
+                        clientSocket.close();
+                    }
+                }
                 catch (IOException e) {
-                    System.out.println("could not close server normally");
+                    e.printStackTrace();
+                }
             }
         }
     }

@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daab79da-8e0b-4cb4-999e-5d546ad044bb" name="Changes" comment="structured">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/ArchiveDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/UsersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/exception/DAOException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/factory/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/impl/XmlArchiveDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/dao/impl/XmlUsersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/criteria/Criteria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/criteria/CriteriaTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/criteria/SearchCriteria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/rights/RightType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/entity/rights/RightTypeTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/answers/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/answers/Answers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/client/ClientMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/requests/Requests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/requests/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/server/ServerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/ArchiveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/exception/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/factory/ServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/impl/ArchiveServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/service/validation/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/resources/resources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/main/resources/users.xml" afterDir="false" />
+    <list default="true" id="daab79da-8e0b-4cb4-999e-5d546ad044bb" name="Changes" comment="finished work">
+      <change afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/server/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/main/java/by/tc/task/main/server/ServerMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/5 sem/WebTech/LW/lw3/Archive",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/5 sem/WebTech/LW/lw3/Archive&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ClientMain">
     <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.tc.task.main.client.ClientMain" />
@@ -124,7 +97,8 @@
       <updated>1670648425693</updated>
       <workItem from="1670648427362" duration="499000" />
       <workItem from="1670684198909" duration="21637000" />
-      <workItem from="1670756661592" duration="19596000" />
+      <workItem from="1670756661592" duration="19936000" />
+      <workItem from="1670779266790" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="structured">
       <created>1670648794162</created>
@@ -133,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670648794163</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finished work">
+      <created>1670778796012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670778796012</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="structured" />
-    <option name="LAST_COMMIT_MESSAGE" value="structured" />
+    <MESSAGE value="finished work" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
