@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Students>
+    <Student group="1010001" id="10100013" name="Johnathan" surname="Joh"/>
+    <Student group="1010002" id="10100014" name="Diego" surname="Brando"/>
+    <Student group="1010001" id="10100012" name="John" surname="Johnson"/>
+</Students>

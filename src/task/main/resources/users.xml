@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Users>
+    <User login = "Jolyn" hashedPassword = "436787cba25260779c44c2fecc87c24b" rights = "read"/>
+    <User login = "Johny" hashedPassword = "babb51f3ea64b75c82dae2e757797666" rights = "modificate"/>
+    <User login = "Joshua" hashedPassword = "85b103482a20682da703aa388933a6d8" rights = "delete"/>
+</Users>
